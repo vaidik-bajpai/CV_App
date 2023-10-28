@@ -1,0 +1,142 @@
+@import url('https://fonts.googleapis.com/css2?family=Kumbh+Sans&family=Lobster&family=Pacifico&family=Roboto&family=Roboto+Slab&family=Russo+One&family=Tektur&display=swap');
+
+.universal{
+    padding: 2rem 5rem;
+    height: 29.7cm;
+    width: 21cm;
+    position: sticky;
+    top: 2rem;
+}
+
+.top{
+    display: flex;
+    justify-content: space-between;
+}
+.head{
+    display: flex;
+    flex-flow: column;
+    gap: 5px;
+    justify-content: center;
+}
+
+.header{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+.name{
+    font-size: 50px;
+    font-weight: bold;
+    color: black;
+    font-family: 'Russo One', sans-serif;
+}
+.work{
+    display: grid;
+    font-size: 20px;
+    background: black;
+    padding: 10px;
+    border-radius: 20px;
+    place-content: center;
+    font-family: 'Pacifico', cursive;
+    max-width: 280px;
+}
+.image{
+    width: 180px;
+    height: 180px;
+    background: black;
+    border-radius: 50%;
+    flex-shrink: 0;
+}
+.aboutMe{
+    margin-bottom: 20px;
+    font-family: 'Kumbh Sans', sans-serif;
+    color: black;
+}
+
+.center{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    border-top: 5px solid black;
+    border-bottom: 5px solid black;
+}
+
+.experienceList .Position {
+    color: whitesmoke;
+}
+.down{
+    display: flex;
+}
+
+.Position, .school{
+    font-family: 'Lobster', sans-serif;
+    font-weight: bold;
+    text-shadow: 3px 3px 3px black;
+    margin-bottom: 5px;
+}
+
+.degree{
+    font-family: 'Kumbh Sans', sans-serif;
+    font-size: 0.9rem;
+    color: black;
+}
+
+.title{
+    font-size: 30px;
+    font-weight: bold;
+    font-family: 'Russo one',sans-serif;
+    margin-bottom: 10px;
+    color: black;
+}
+
+.down{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+}
+
+.footer{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px 0px;
+    margin-top: 30px;
+}
+
+.location, .email, .phone, .linkToPortfolio{
+    display: flex;
+    gap: 15px;
+    color: black;
+    font-family: 'Kumbh Sans', sans-serif;
+}
+
+.text{
+    display: grid;
+    place-content: center;
+}
+
+.skillList{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 10px;
+}
+.skillItem{
+    display: grid;
+    place-content: center;
+    padding: 5px;
+    background: black;
+    color: white;
+    border-radius: 10px;
+    font-weight: bold;
+    font-family: 'Lobster', cursive;
+}
+
+.experienceList{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+    font-size: 15px;
+    color: black;
+}
+

@@ -1,0 +1,79 @@
+.theCard{
+    background: #1c1c1c;
+    padding: 30px;
+    font-family: 'Pacifico', sans-serif;
+}
+
+.header .head{
+    font-family: Lobster, cursive;
+    color: whitesmoke;
+    font-size: 30px;
+}
+
+.TitleCard .header{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.TitleCard .footer{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+input[type="text"]{
+    border: none;
+}
+
+textarea{
+    border: none;
+    appearance: none;
+}
+
+input[type="text"]:hover textarea:hover{
+    background: rgba(0, 106, 255, 0.4);
+}
+.inputTags:hover, .textAreaTag:hover{
+    background: rgba(0, 106, 255, 0.4);
+}
+
+.heading{
+    display: flex;
+    gap: 10px
+}
+
+.expHeading{
+    margin-top: 10px;
+    font-family: Tektur,cursive;
+    font-weight: bold;
+}
+
+.skillInput{
+    display: flex;
+    flex-direction: column;
+}
+
+.skillInputItem{
+    display: flex;
+}
+.bin{
+    display: grid;
+    place-content: center;
+    width: 50px;
+    height: 50px;
+    padding: 12px;
+    margin-top: 20px;
+}
+
+.experienceHeader{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+}
+
+button{
+    background: #1c1c1c;
+}
