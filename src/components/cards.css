@@ -126,7 +126,7 @@ button{
 }
 
 .bin .dustBin{
-    fill: #92EFFD;
+    fill: #4E65FF;
 }
 
 .add{
@@ -188,4 +188,25 @@ button{
     width : 100%;
     gap: 20px;
     justify-content: space-between;
+}
+
+.inputTags, .textAreaTag{
+    font-size: 100%;
+    font-family: Kumbh Sans,sans-serif;
+}
+
+.image{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.pdfIcon{
+    fill: #4E65FF;
+}
+
+.pdfIconContainer{
+    display: grid;
+    place-content: center;
+    padding: 5px;
 }
