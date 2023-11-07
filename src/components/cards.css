@@ -17,26 +17,69 @@
     justify-content: space-between;
 }
 
-.TitleCard .footer{
+.creator{
     display: flex;
+    gap: 10px;
     flex-direction: row;
     align-items: center;
     justify-content: center;
 }
-input[type="text"]{
-    border: none;
+
+.creatorGithub{
+    display: flex;
+    align-items: center;
+    color: whitesmoke;
+    background: #242424;
+    padding: 5px 15px;
+    border-radius: 10px;
+    text-decoration: none;
+}
+.creatorGithub:hover{
+    color:rgb(79, 103, 255);
+    transition: 0.5s;
+}
+.githubIcon{
+    width: 30px;
+    height: auto;
+    fill: whitesmoke;
+}
+.creatorName{
+    font-family: Lobster, cursive;
 }
 
-textarea{
+input[type="text"]:placeholder-shown, textarea:placeholder-shown{
+    font-size: 100%;
+}
+input[type="text"], textarea{
     border: none;
-    appearance: none;
+    outline: none;
 }
 
-input[type="text"]:hover textarea:hover{
-    background: rgba(0, 106, 255, 0.4);
+.inputfile{
+    display: none;
 }
-.inputTags:hover, .textAreaTag:hover{
-    background: rgba(0, 106, 255, 0.4);
+
+#filepicture{
+    display: block;
+    padding: 16px;
+    font-size: 100%;
+    background: #242424;
+    width: 100%;
+    border-radius: 10px;
+    cursor: pointer;
+    margin-top: 20px;
+    font-family: Kumbh Sans,sans-serif;
+    color: #92EFFD;
+}
+
+.inputTags:hover, .textAreaTag:hover, #filepicture:hover{
+    background-color: rgb(145, 238, 252, 0.7);
+    transition: 0.5s;
+}
+
+.inputTags, .textAreaTag{
+    font-size: 100%;
+
 }
 
 .heading{
@@ -76,4 +119,73 @@ input[type="text"]:hover textarea:hover{
 
 button{
     background: #1c1c1c;
+}
+
+.bin{
+    background-color: transparent;
+}
+
+.bin .dustBin{
+    fill: #92EFFD;
+}
+
+.add{
+    background-color: field;
+}
+
+.add:hover{
+    background: deepskyblue;
+    transition: 0.25s ease-in-out;
+}
+
+.icons{
+    fill: rgb(79, 103, 255);
+}
+
+.inputTags, .textAreaTag{
+    background-color: #242424;
+}
+
+.color{
+    width: 100%;
+    padding: 30px;
+    background-color: aqua;
+    margin-top: 10px;
+    border-radius: 40px;
+    height: 32px;
+    cursor: pointer;
+}
+
+.color:hover{
+    transform: scale(1.04);
+    transition: 0.25s ease-in-out;
+}
+
+.colorPicker{
+    visibility: hidden;
+    padding: 1rem;
+}
+
+.colors{
+    display: flex;
+    align-items: center;
+    width : 100%;
+    gap: 20px;
+    justify-content: space-between;
+}
+
+.fullName{
+    display: flex;
+    align-items: center;
+    width : 100%;
+    gap: 20px;
+    justify-content: space-between;
+}
+
+.addressEmail{
+    display: flex;
+    align-items: center;
+    width : 100%;
+    gap: 20px;
+    justify-content: space-between;
 }

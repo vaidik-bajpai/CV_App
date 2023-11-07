@@ -5,8 +5,7 @@ function Input({field, className='inputTags', fun, id='undefined'}){
         width: "100%",
         borderRadius: "10px",
         padding: "16px",
-        marginTop: "20px",
-        
+        marginTop: "20px",   
     }
     
     return (

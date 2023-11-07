@@ -1,23 +1,17 @@
-function ColorPicker({field, height="60px", width="100%", className, fun, value}){
-    let style = {
-        height: height,
-        width: width,
-        display: "inline",
-        borderRadius: "40px",
-        padding: "16px",
-        marginTop: "10px",
-        border: "none",
-        background: value
-    }
+function ColorPicker({field, width="100%", fun, value, id}){
     return (
-        <input 
-            className={className}
-            type="color"
-            placeholder={field}
-            style={style}
-            onChange={fun}
-            value={value}
-         />
+        <>
+            <label htmlFor={id} className="color" style={{background: `${value}`}}>
+                <input 
+                className="colorPicker"
+                type="color"
+                onChange={fun}
+                id={id}
+                value={value}
+                />
+            </label>
+            
+         </>
     )
 }
 

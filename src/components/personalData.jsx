@@ -1,9 +1,8 @@
 import Input from "./input";
-import Split from "./splitter";
 import TextArea from "./textarea";
 import File from "./file";
 import './resume.css'
-function PersonalData({name, icon, data, setData}){
+function PersonalData({name, data, setData}){
   function handleChange(e){
     let newArray = data.info.map(item => {
       if(e.target.placeholder === item.name)
@@ -13,6 +12,17 @@ function PersonalData({name, icon, data, setData}){
     setData({...data, info: newArray})
     console.log(data.info)
   }
+
+  function handleImage(e){
+    const reader = new FileReader();
+    reader.onload = () => {
+      if(reader.readyState === 2){
+        setData({...data, fileSrc: reader.result})
+      }
+    }
+    reader.readAsDataURL(e.target.files[0])
+  }
+
     return (
         <section
           className="theCard"
@@ -22,7 +32,7 @@ function PersonalData({name, icon, data, setData}){
           }}
         >
             <div className="heading">
-            <svg width="30px" height="30px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" stroke="#000000"><g id="SVGRepo_bgCarrier" strokeWidth="0"></g><g id="SVGRepo_tracerCarrier" strokeLinecap="round" strokeLinejoin="round"></g><g id="SVGRepo_iconCarrier"> <path d="M7 14H12.5M7 10H17M10 19H6.2C5.0799 19 4.51984 19 4.09202 18.782C3.71569 18.5903 3.40973 18.2843 3.21799 17.908C3 17.4802 3 16.9201 3 15.8V8.2C3 7.07989 3 6.51984 3.21799 6.09202C3.40973 5.71569 3.71569 5.40973 4.09202 5.21799C4.51984 5 5.0799 5 6.2 5H17.8C18.9201 5 19.4802 5 19.908 5.21799C20.2843 5.40973 20.5903 5.71569 20.782 6.09202C21 6.51984 21 7.0799 21 8.2V8.5M14 20L16.025 19.595C16.2015 19.5597 16.2898 19.542 16.3721 19.5097C16.4452 19.4811 16.5147 19.4439 16.579 19.399C16.6516 19.3484 16.7152 19.2848 16.8426 19.1574L21 15C21.5523 14.4477 21.5523 13.5523 21 13C20.4477 12.4477 19.5523 12.4477 19 13L14.8426 17.1574C14.7152 17.2848 14.6516 17.3484 14.601 17.421C14.5561 17.4853 14.5189 17.5548 14.4903 17.6279C14.458 17.7102 14.4403 17.7985 14.405 17.975L14 20Z" stroke="#006AFF" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"></path> </g></svg>
+            <svg xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink" width="32" height="32" id="candidate"><defs><linearGradient id="a"><stop offset="0" stopColor="#4E65FF"></stop><stop offset="1" stopColor="#92EFFD"></stop></linearGradient><linearGradient id="b" x1="5" x2="23" y1="16" y2="16" gradientUnits="userSpaceOnUse" xlinkHref="#a"></linearGradient></defs><path fill="url(#b)" d="M5.5 3a.5.5 0 0 0-.5.5v25a.5.5 0 0 0 .5.5h16a.5.5 0 0 0 .354-.146l4-4A.5.5 0 0 0 26 24.5v-21a.5.5 0 0 0-.5-.5h-20zM6 4h19v20a.5.5 0 0 0-.008 0H21.5a.5.5 0 0 0-.5.5v3.494A.5.5 0 0 0 21 28H6V4zm3.5 2C8.677 6 8 6.678 8 7.5S8.677 9 9.5 9 11 8.322 11 7.5 10.323 6 9.5 6zM13 6v1h10V6H13zM9.5 7c.282 0 .5.218.5.5 0 .282-.218.5-.5.5a.493.493 0 0 1-.5-.5c0-.282.218-.5.5-.5zM13 8v1h4V8h-4zm-3.5 3c-.823 0-1.5.678-1.5 1.5S8.677 14 9.5 14s1.5-.678 1.5-1.5-.677-1.5-1.5-1.5zm3.5 0v1h10v-1H13zm-3.5 1c.282 0 .5.218.5.5 0 .282-.218.5-.5.5a.493.493 0 0 1-.5-.5c0-.282.218-.5.5-.5zm3.5 1v1h2v-1h-2zm-3.5 3c-.823 0-1.5.677-1.5 1.5S8.677 19 9.5 19s1.5-.677 1.5-1.5-.677-1.5-1.5-1.5zm3.5 0v1h10v-1H13zm-3.5 1c.282 0 .5.218.5.5 0 .282-.218.5-.5.5a.493.493 0 0 1-.5-.5c0-.282.218-.5.5-.5zm3.5 1v1h6v-1h-6zm-3.5 3c-.823 0-1.5.677-1.5 1.5S8.677 24 9.5 24s1.5-.677 1.5-1.5-.677-1.5-1.5-1.5zm3.5 0v1h10v-1H13zm-3.5 1c.282 0 .5.218.5.5 0 .282-.218.5-.5.5a.493.493 0 0 1-.5-.5c0-.282.218-.5.5-.5zm3.5 1v1h4v-1h-4zm9 2h2.293L22 27.293V25z" color="#000" fontFamily="sans-serif" fontWeight="400" overflow="visible" style={{lineHeight:"normal", textIndent:"0", textAlign:"start", textDecorationLine: "none", textDecorationStyle:"solid",textDecorationColor:"#000",textTransform:"none",blockProgression:"tb",isolation:"auto",mixBlendMode:"normal"}}></path></svg>
               <h2
                 className="cardName"
                 fontFamily="'Russo One', sans-serif"
@@ -30,11 +40,12 @@ function PersonalData({name, icon, data, setData}){
                   {name}
               </h2>
             </div>
-            <Split input={[<Input field={data.info[0].name} fun={handleChange}/>,<Input field={data.info[1].name} fun={handleChange}/>]}/>
-            
-            
+            <div className="fullName">
+              <Input field={data.info[0].name} fun={handleChange}/>
+              <Input field={data.info[1].name} fun={handleChange}/>
+            </div>
             <Input field={data.info[2].name} fun={handleChange}/>
-            <File/>
+            <File fun={handleImage}/>
 
             <TextArea field={data.info[3].name} fun={handleChange}/>
         </section>

@@ -1,22 +1,16 @@
-function File({field, className='fileTags', eventListener, fun}){
-    let style = {
-        width: "100%",
-        borderRadius: "10px",
-        padding: "16px",
-        marginTop: "20px",
-        appearance: "none",
-        height: "50px",
-        background: "#333",
-    }
+function File({fun}){
     
     return (
-        <input 
-            className={className}
-            type="file"
-            placeholder={field}
-            style={style}
-            onChange={fun}
-         />
+        <>
+            <input 
+                className="inputfile"
+                id="file"
+                type="file"
+                onChange={fun}
+                accept="image/*"
+            />
+            <label htmlFor="file" id='filepicture'>Choose a Picture</label>
+        </>
     )
 }
 

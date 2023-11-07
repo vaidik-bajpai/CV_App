@@ -5,15 +5,15 @@ import Education from "./components/education";
 import PersonalData from "./components/personalData";
 import Contacts from "./components/contacts";
 import Skills from "./components/skills";
-import Gradient from "./components/Gradient";
+import Gradient from "./components/gradient";
 import Resume from "./components/resume";
 import ResumeMaker from "./components/resumeMaker";
 import './App.css'
 
 function App() { 
   const [data, setData] = useState({
-    colorL: "#0011ff",
-    colorR: "#03d3fc",
+    colorL: "#4E65FF",
+    colorR: "#92EFFD",
     fileName: "",
     fileSrc: "",
     firstName: "",
@@ -80,7 +80,7 @@ function App() {
   return (
     <div className="top">
       <div className="sidebar">
-            <ResumeMaker name="Resume Maker"/>
+            <ResumeMaker name="Resume.com"/>
             <Gradient name="Gradient" data={data} setData={setData}/>
             <PersonalData name="Personal Data" data={data} setData={setData}/>
             <WorkExperience name="Work Experience" data={data} setData={setData}/>

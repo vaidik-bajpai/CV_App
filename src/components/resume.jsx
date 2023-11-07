@@ -16,7 +16,7 @@ function Resume({data}){
                         <div className="work">{data.info[2].text}</div>
                     </div>
                     <div className="image">
-
+                        <img src={data.fileSrc} alt="" className="img"/>
                     </div>
                 </div>
                 <div className='aboutMe'>{data.info[3].text}</div>
