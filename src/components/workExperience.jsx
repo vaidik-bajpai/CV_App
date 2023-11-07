@@ -82,7 +82,7 @@ function WorkExperience({name, data, setData}){
                           <Input field="Company" width="100%" display="inline" fun={handleChange} id={"company" + 0} className="company inputTags"/>
                           <Input field="Start date of employement" width="100%" fun={handleChange} id={"startDate" + 0} className="startDate inputTags"/>
                           <Input field="End date of employement" width="100%" fun={handleChange} id={"endDate" + 0} className="endDate inputTags"/>
-                          <TextArea field="Your main occupation, daily tasks and work field" width="100%" height="150px" fun={handleChange} id={"description" + 0} className="descriptionut textAreaTag"/>
+                          <TextArea field="Your main occupation, daily tasks and work field" width="100%" height="150px" fun={handleChange} id={"description" + 0} className="description textAreaTag"/>
                         </div>
                       )
                     }    
