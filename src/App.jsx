@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useRef} from "react";
 import {v4 as uuidv4} from "uuid";
 import WorkExperience from "./components/workExperience";
 import Education from "./components/education";
@@ -11,6 +11,7 @@ import ResumeMaker from "./components/resumeMaker";
 import './App.css'
 
 function App() { 
+  const printRef = useRef();
   const [data, setData] = useState({
     colorL: "#4E65FF",
     colorR: "#92EFFD",
@@ -80,7 +81,7 @@ function App() {
   return (
     <div className="top">
       <div className="sidebar">
-            <ResumeMaker name="Resume.com"/>
+            <ResumeMaker printRef={printRef} name="Resume.com"/>
             <Gradient name="Gradient" data={data} setData={setData}/>
             <PersonalData name="Personal Data" data={data} setData={setData}/>
             <WorkExperience name="Work Experience" data={data} setData={setData}/>
@@ -88,8 +89,8 @@ function App() {
             <Skills name="Skills" data={data} setData={setData}/>
             <Contacts name="Contacts" data={data} setData={setData}/>
         </div>
-        <div className="resume">
-          <Resume data={data} setData={setData}/>
+        <div className="resume" >
+          <Resume printRef={printRef} data={data} setData={setData}/>
         </div>
     </div>
   )

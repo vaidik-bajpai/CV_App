@@ -10,6 +10,11 @@
     font-size: 30px;
 }
 
+.workExperience{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
 .TitleCard .header{
     display: flex;
     flex-direction: row;
@@ -193,6 +198,10 @@ button{
 .inputTags, .textAreaTag{
     font-size: 100%;
     font-family: Kumbh Sans,sans-serif;
+}
+
+.textAreaTag{
+    resize: none;
 }
 
 .image{

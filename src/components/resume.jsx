@@ -1,6 +1,6 @@
 import './resume.css'
 
-function Resume({data}){
+function Resume({data, printRef}){
     let style = {
         backgroundImage: "linear-gradient(to right," + data.colorL + "," + data.colorR + ')'
     }
@@ -8,6 +8,7 @@ function Resume({data}){
         <div 
           className="universal"
           style={style}
+          ref={printRef}
         >
             <div className="header">
                 <div className="top">
@@ -27,7 +28,7 @@ function Resume({data}){
                 {
                     data.experience.map((item, index) => {
                         return(
-                            <div className={item.id}>
+                            <div className={"workExperience "+ item.id}>
                                 <div
                                     className="Position">
                                     {item.position}
